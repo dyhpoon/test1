@@ -1,0 +1,96 @@
+@mixin center-block
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+html, body
+    padding: 0
+    margin: 0
+    height: 100%
+    font-family: 'Open Sans Condensed', sans-serif
+
+body
+    background: linear-gradient(15deg, #d33f34 50%, #a61322 50.1%)
+
+.shop-card
+    @include center-block
+    width: 350px
+    background: #f5f5f5
+    border-radius: 5px
+    padding: 25px
+    text-align: center
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3)
+    overflow: hidden
+
+    .title
+        font-weight: 900
+        text-transform: uppercase
+        font-size: 30px
+        color: #23211f
+        margin-bottom: 5px
+
+    .desc
+        font-size: 17px
+        opacity: .8
+        margin-bottom: 3px
+
+    .slider
+        figure
+            margin: 0
+            padding: 0
+            overflow: hidden
+            outline: none!important
+
+            img
+                margin: -95px 0 -60px
+                width: 100%
+
+    .cta
+        padding: 20px 20px 5px
+        display: flex
+        justify-content: space-between
+
+        .price
+            font-size: 22px
+            font-weight: 900
+            padding-top: 2px
+            margin-top: 4px
+            color: #ff3100
+
+        .btn
+            display: inline-block
+            font-size: 13px
+            font-weight: 900
+            text-transform: uppercase
+            color: #ff3100
+            padding: 12px 18px
+            border: 1px solid #ff3100
+            border-radius: 20px
+            overflow: hidden
+            background: none
+            cursor: pointer
+            z-index: 1
+            outline: none
+            overflow: hidden
+            
+            .bg
+                display: block
+                width: 101%;
+                height: 101%;
+                z-index: -1;
+                opacity: 1;
+                transition: all .3s ease-in-out;
+                background: linear-gradient(135deg, #a61322, #d33f34);
+
+            &:hover
+                color: #fff
+                border: 1px solid transparent
+
+                .bg
+                    opacity: 1
