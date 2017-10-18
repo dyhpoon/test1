@@ -1,2 +1,4 @@
+*.sw*
 config.codekit3
 .DS_store
+node_modules/
