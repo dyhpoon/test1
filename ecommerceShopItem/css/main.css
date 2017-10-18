@@ -54,6 +54,7 @@ body {
       color: #ff3100; }
     .shop-card .cta .btn {
       display: inline-block;
+      position: relative;
       font-size: 13px;
       font-weight: 900;
       text-transform: uppercase;
@@ -65,18 +66,20 @@ body {
       background: none;
       cursor: pointer;
       z-index: 1;
-      outline: none;
-      overflow: hidden; }
+      outline: none; }
       .shop-card .cta .btn .bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         display: block;
-        width: 101%;
-        height: 101%;
+        width: 103%;
+        height: 103%;
         z-index: -1;
-        opacity: 1;
+        opacity: 0;
         transition: all .3s ease-in-out;
         background: linear-gradient(135deg, #a61322, #d33f34); }
       .shop-card .cta .btn:hover {
         color: #fff;
-        border: 1px solid transparent; }
-        .shop-card .cta .btn:hover .bg {
-          opacity: 1; }
+        border: 1px solid #d33f34 !important;
+        background: #d33f34; }

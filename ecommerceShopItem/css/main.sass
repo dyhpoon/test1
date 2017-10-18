@@ -65,6 +65,7 @@ body
 
         .btn
             display: inline-block
+            position: relative
             font-size: 13px
             font-weight: 900
             text-transform: uppercase
@@ -77,20 +78,19 @@ body
             cursor: pointer
             z-index: 1
             outline: none
-            overflow: hidden
             
             .bg
+                @include center-block
                 display: block
-                width: 101%;
-                height: 101%;
+                width: 103%;
+                height: 103%;
                 z-index: -1;
-                opacity: 1;
+                opacity: 0;
                 transition: all .3s ease-in-out;
                 background: linear-gradient(135deg, #a61322, #d33f34);
 
             &:hover
                 color: #fff
-                border: 1px solid transparent
+                border: 1px solid #d33f34!important;
+                background: #d33f34
 
-                .bg
-                    opacity: 1
